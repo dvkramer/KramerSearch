@@ -3,6 +3,7 @@ const input = document.getElementById('search-input');
 const resultsContainer = document.getElementById('results');
 const loadingIndicator = document.getElementById('loading');
 const errorDisplay = document.getElementById('error');
+// REMOVED: const googleBrandingContainer = document.getElementById('google-branding');
 
 form.addEventListener('submit', async (event) => {
     event.preventDefault(); // Prevent page reload
@@ -14,7 +15,9 @@ form.addEventListener('submit', async (event) => {
     resultsContainer.innerHTML = '';
     errorDisplay.textContent = '';
     errorDisplay.style.display = 'none';
+    // REMOVED: googleBrandingContainer.style.display = 'none';
     loadingIndicator.style.display = 'block';
+
 
     try {
         // Call YOUR backend API endpoint (relative path works on Vercel)
@@ -40,6 +43,7 @@ form.addEventListener('submit', async (event) => {
         loadingIndicator.style.display = 'none'; // Hide loading
         errorDisplay.textContent = `Error: ${err.message}`;
         errorDisplay.style.display = 'block';
+        // REMOVED: googleBrandingContainer.style.display = 'none';
     }
 });
 
@@ -63,11 +67,14 @@ function displayResults(googleData) {
             `;
             resultsContainer.appendChild(resultElement);
         });
+        // REMOVED: googleBrandingContainer.style.display = 'block';
     } else if (googleData.error) {
          errorDisplay.textContent = `API Error: ${googleData.error.message}`;
          errorDisplay.style.display = 'block';
+         // REMOVED: googleBrandingContainer.style.display = 'none';
     }
      else {
         resultsContainer.innerHTML = '<p>No results found.</p>';
+        // REMOVED: googleBrandingContainer.style.display = 'none';
     }
 }

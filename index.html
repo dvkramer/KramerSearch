@@ -33,7 +33,6 @@
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             margin-top: 30px;
-            /* Removed flex-grow to allow footer to sit below */
         }
 
         /* Header */
@@ -80,7 +79,7 @@
             background-color: #166fe5; /* Darker blue on hover */
         }
 
-        /* Results Area & Branding */
+        /* Results Area */
         #results-area {
             margin-top: 20px;
         }
@@ -157,14 +156,7 @@
             font-weight: 500;
         }
 
-         /* Google Branding Container */
-         #google-branding {
-            margin-top: 15px; /* Space above the branding */
-            margin-bottom: 15px; /* Space below the branding */
-            /* The brand.js script will style the content inside */
-            text-align: center; /* Center the branding element */
-            min-height: 20px; /* Ensure space even if branding fails to load */
-        }
+        /* REMOVED #google-branding CSS rule */
 
         /* Footer */
         footer {
@@ -200,7 +192,7 @@
             <button type="submit">Search</button>
         </form>
 
-        <!-- Area for Messages, Results, and Branding -->
+        <!-- Area for Messages and Results -->
         <div id="results-area">
             <div id="loading" style="display: none;">Loading...</div>
             <div id="error" style="display: none;"></div>
@@ -208,8 +200,8 @@
                 <!-- Search results will be displayed here by script.js -->
             </div>
 
-             <!-- Google Attribution DIV -->
-             <div id="google-branding"></div>
+             <!-- REMOVED Google Attribution DIV -->
+             <!-- <div id="google-branding"></div> -->
         </div>
 
     </div> <!-- End .container -->
@@ -221,9 +213,8 @@
     <!-- Your existing script for search logic -->
     <script src="script.js"></script>
 
-    <!-- Google Attribution API Script -->
-    <!-- Loads the 'Enhanced by Google' logo/text into the #google-branding div -->
-    <script async src="https://www.gstatic.com/prose/brand.js?container=google-branding"></script>
+    <!-- REMOVED Google Attribution API Script -->
+    <!-- <script src="https://www.gstatic.com/prose/brand.js" targetId="google-branding"></script> -->
 
 </body>
 </html>
