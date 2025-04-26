@@ -1,0 +1,11 @@
+# Dependencies
+node_modules
+
+# Optional local environment variables
+.env
+.env.*
+
+# Optional editor directories and files
+.vscode
+.idea
+*.DS_Store
