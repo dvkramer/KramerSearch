@@ -181,7 +181,28 @@
         footer a:hover {
             text-decoration: none; /* Ensure no underline on hover */
         }
+/* Media Query for Mobile Layout Adjustments */
+@media (max-width: 600px) { /* Apply these styles on screens 600px wide or less */
 
+    #search-form {
+        flex-direction: column; /* Stack input and button vertically */
+        gap: 15px; /* Increase gap slightly for vertical spacing */
+    }
+
+    button[type="submit"] {
+        width: 100%; /* Make button full width on mobile */
+    }
+
+    /* Optional: Reduce container padding slightly on mobile */
+    .container {
+        padding: 25px 20px; /* Adjust top/bottom and left/right padding */
+    }
+
+    /* Optional: Slightly smaller heading on mobile */
+    h1 {
+        font-size: 1.8rem;
+    }
+}
     </style>
 </head>
 <body>
